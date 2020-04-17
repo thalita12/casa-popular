@@ -1,23 +1,21 @@
-# Compiled class file
-*.class
+casa-popular-app/.DS_Store
+casa-popular-app/node_modules
+casa-popular-app/dist
 
-# Log file
-*.log
+# local env files
+casa-popular-app/.env.local
+casa-popular-app/.env.*.local
 
-# BlueJ files
-*.ctxt
+# Log files
+casa-popular-app/npm-debug.log*
+casa-popular-app/yarn-debug.log*
+casa-popular-app/yarn-error.log*
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
