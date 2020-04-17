@@ -21,4 +21,4 @@ Lista
 
 ----
 
-Desenvolvimento por Thalita Oliveira.
+Desenvolvido por Thalita Oliveira.
