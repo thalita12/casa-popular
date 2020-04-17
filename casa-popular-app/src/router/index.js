@@ -1,14 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Cadastro from '../views/cadastro/Cadastro'
+import Contemplados from '../views/contemplados/Contemplados'
+import Resultado from '../views/resultado/Resultado'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Resultado',
+    component: Resultado
+  },
+  {
+    path: '/cadastro/novo',
+    name: 'Cadastro',
+    component: Cadastro
+  },
+  {
+    path: '/contemplados/listagem',
+    name: 'Contemplados',
+    component: Contemplados
   },
   {
     path: '/about',

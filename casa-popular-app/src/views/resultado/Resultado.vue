@@ -1,29 +1,23 @@
 <template>
-  <v-content>
-    <v-container>
-      <h1>{{ msg }}</h1>
+  <div class="resultado">
+    <h1>Aqui é o resultado</h1>
 
-      <v-data-table
-              :headers="headers"
-              :items="desserts"
-              :items-per-page="5"
-              class="elevation-1"
-      ></v-data-table>
-    </v-container>
-  </v-content>
+    <v-data-table
+            :headers="headers"
+            :items="desserts"
+            :items-per-page="5"
+            class="elevation-1"/>
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'HelloWorld',
-    props: {
-      msg: String
-    },
+    name: 'Resultado',
     data () {
       return {
         headers: [
           {
-            text: 'Dessert (100g serving)',
+            text: 'Pontuação',
             align: 'start',
             sortable: false,
             value: 'name'
@@ -120,8 +114,3 @@
     }
   }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-
-</style>
