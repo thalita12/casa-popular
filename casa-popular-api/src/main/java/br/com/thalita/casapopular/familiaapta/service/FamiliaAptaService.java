@@ -19,4 +19,5 @@ public class FamiliaAptaService {
     public Object buscarTodos() {
         return familiaAptaBO.listar();
     }
+
 }

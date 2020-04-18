@@ -15,6 +15,9 @@ public class FamiliaAptaBO {
     @Autowired
     private FamiliaRepository familiaRepository;
 
+    /*
+    * Método que traz todas as famílias aptas para participar do governo e retorna uma lista ordenada pela pontuação em ordem descrscente
+     */
     public List<Familia> listar() {
         List<Familia> familias = familiaRepository.findAll();
 
@@ -24,4 +27,5 @@ public class FamiliaAptaBO {
             .sorted(Comparator.comparingInt(Familia::pontuacao).reversed())
             .collect(Collectors.toList());
     }
+
 }

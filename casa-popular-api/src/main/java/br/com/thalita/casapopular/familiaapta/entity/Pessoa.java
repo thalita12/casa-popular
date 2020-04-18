@@ -24,7 +24,26 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_pessoa")
     private Long id;
 
+    @Column(name = "PE_NOME")
+    private String nome;
+
+    @Column(name = "PE_TIPO")
+    private Tipo tipo;
+
+    @Column(name = "PE_DATA_NASCIMENTO")
+    private LocalDateTime dataDeNascimento;
+
+    @Column(name = "PE_VALOR_RENDA")
+    private BigDecimal valorRenda;
+
     @OneToMany
     @Column(name = "FA_ID")
     private Familia familia;
+
+    public enum Tipo {
+        PRETENDENTE,
+        CONJUGE,
+        DEPENDENTE
+    }
+
 }

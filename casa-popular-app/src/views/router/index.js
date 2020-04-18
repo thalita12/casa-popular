@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Cadastro from '../views/cadastro/Cadastro'
-import Contemplados from '../views/contemplados/Contemplados'
-import FamiliasAptas from '../views/familias-aptas/FamiliasAptas'
+import Cadastro from '../pages/cadastro/Cadastro'
+import Contemplados from '../pages/contemplados/Contemplados'
+import FamiliasAptas from '../pages/familias-aptas/FamiliasAptas'
 
 Vue.use(VueRouter)
 

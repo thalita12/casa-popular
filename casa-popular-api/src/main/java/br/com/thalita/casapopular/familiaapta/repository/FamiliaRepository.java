@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FamiliaRepository extends JpaRepository<Familia, Long> {
 
-    @Query
-    List<Familia> ..
+    @Query("select fa_id from tb_familia where ...")
+    List<Familia>
 }

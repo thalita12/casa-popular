@@ -1,6 +1,8 @@
+# Front-end files
 casa-popular-app/.DS_Store
 casa-popular-app/node_modules
 casa-popular-app/dist
+casa-popular-app/package-lock.json
 
 # local env files
 casa-popular-app/.env.local
@@ -10,6 +12,10 @@ casa-popular-app/.env.*.local
 casa-popular-app/npm-debug.log*
 casa-popular-app/yarn-debug.log*
 casa-popular-app/yarn-error.log*
+
+# Back-end files
+casa-popular-api/target
+casa-popular-api/casa-popular-api.iml
 
 # Editor directories and files
 .idea

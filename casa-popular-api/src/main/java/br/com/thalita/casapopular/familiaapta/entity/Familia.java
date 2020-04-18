@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -26,6 +27,13 @@ public class Familia {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_familia")
     private Long id;
 
+    @Column(name = "FA_STATUS")
+    private Status status;
+
+
+    @Column(name = "FA_DATA_SELECAO")
+    private LocalDateTime dataDeSelecao;
+
     private List<Pessoa> pessoas;
 
     public Integer pontuacao () {
@@ -35,4 +43,12 @@ public class Familia {
     public Boolean apta () {
         return Boolean.FALSE;
     }
+
+    public enum Status {
+        CADASTRO_VALIDO("0"),
+        POSSUI_CASA("1"),
+        OUTRO_PROCESSO_SELECAO("2"),
+        CADASTRO_INCOMPLETO("3")
+    }
+
 }

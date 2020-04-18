@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/casa-popular.iml" filepath="$PROJECT_DIR$/.idea/casa-popular.iml" />
+      <module fileurl="file://$PROJECT_DIR$/casa-popular-api/casa-popular-api.iml" filepath="$PROJECT_DIR$/casa-popular-api/casa-popular-api.iml" />
     </modules>
   </component>
 </project>

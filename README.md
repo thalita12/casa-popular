@@ -1,5 +1,5 @@
 # casa-popular 🏡
-Distribuição de casas populares do governo.
+Projeto para realizar a distribuição de casas populares do governo.
 
 ### Índice
 Lista

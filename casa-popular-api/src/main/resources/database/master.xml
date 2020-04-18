@@ -8,4 +8,9 @@
                  relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
     </changeSet>
 
+    <changeSet author="thalita.oliveira" id="002-carga-inicial">
+        <sqlFile encoding="utf8" path="002-carga-inicial.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
 </databaseChangeLog>
