@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Aqui será os contemplados</h1>
+        <h1>Aqui será os contemplados!</h1>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Aqui vai o cadastro</h1>
+        <h1>Aqui será o cadastro</h1>
     </div>
 </template>
 

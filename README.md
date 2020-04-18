@@ -5,16 +5,25 @@ Distribuição de casas populares do governo.
 Lista
 
 ### Pŕe-requisitos
-Lista
+- NPM
 
 ### Bibliotecas
-Lista
+- Front-end
+    - Vue
+    - Vuetify
+    - Vuex
+    - Axios
+    
+- Back-end
+    - Maven
+    - Java 11
+    - Spring
 
 ### Arquitetura do Back-end
 Lista
 
 ### Arquitetura do Front-end
-Lista
+Projeto desenvolvido utilizando o "Vue-cli" para criar a estrutura inicial do `casa-popular-app`.
 
 ### Licença
 [MIT](LICENSE)
