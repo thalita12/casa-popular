@@ -1,9 +1,9 @@
 -- Carga inicial de dados
 
 -- Familia
-insert into tb_familia (fa_id, fa_status, pe_data_selecao)
+insert into tb_familia (fa_id, fa_status, fa_data_selecao)
 values
-    (1, '2', null);
+    (1, 'CADASTRO_VALIDO', null);
 alter sequence seq_familia restart with 2;
 
 -- Pessoas

@@ -17,7 +17,7 @@ public class FamiliaAptaService {
 
     @RequestMapping(method = RequestMethod.GET)
     public Object buscarTodos() {
-        return familiaAptaBO.listar();
+        return familiaAptaBO.buscarTodas();
     }
 
 }

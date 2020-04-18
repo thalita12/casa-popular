@@ -2,6 +2,7 @@ package br.com.thalita.casapopular.familiaapta.business;
 
 import br.com.thalita.casapopular.familiaapta.entity.Familia;
 import br.com.thalita.casapopular.familiaapta.repository.FamiliaRepository;
+import br.com.thalita.casapopular.familiaapta.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,17 +16,20 @@ public class FamiliaAptaBO {
     @Autowired
     private FamiliaRepository familiaRepository;
 
+    @Autowired
+    private PessoaRepository pessoaRepository;
+
     /*
     * Método que traz todas as famílias aptas para participar do governo e retorna uma lista ordenada pela pontuação em ordem descrscente
      */
-    public List<Familia> listar() {
-        List<Familia> familias = familiaRepository.findAll();
+    public List<Familia> buscarTodas() {
+        List<Familia> familias = familiaRepository.buscarTodasComPessoas();
 
-        return familias
-            .stream()
-            .filter(Familia::apta)
-            .sorted(Comparator.comparingInt(Familia::pontuacao).reversed())
-            .collect(Collectors.toList());
+        return familias;
+//            .stream()
+//            .filter(Familia::apta)
+//            .sorted(Comparator.comparingInt(Familia::pontuacao).reversed())
+//            .collect(Collectors.toList());
     }
 
 }

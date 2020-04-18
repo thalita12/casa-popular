@@ -25,7 +25,7 @@
                     if (alert.message !== '') {
                         this.exibir = true
                         this.mensagem = alert.mensagem
-                        this.color = alert.tipo
+                        this.tipo = alert.tipo
                     }
                 }
             )

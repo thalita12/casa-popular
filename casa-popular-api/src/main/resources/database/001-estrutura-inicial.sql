@@ -10,7 +10,7 @@ CACHE 1;
 create table tb_familia
 (
     fa_id integer NOT NULL,
-    fa_status varchar(50),
+    fa_status varchar(25),
     fa_data_selecao timestamp(6)
 );
 
@@ -34,7 +34,7 @@ create table tb_pessoa
 (
     pe_id integer NOT NULL,
     pe_nome varchar(255),
-    pe_tipo varchar(50),
+    pe_tipo varchar(15),
     pe_data_nascimento timestamp(6),
     pe_valor_renda numeric(18,8),
     fa_id bigint

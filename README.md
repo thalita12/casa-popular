@@ -5,7 +5,9 @@ Projeto para realizar a distribuição de casas populares do governo.
 Lista
 
 ### Pŕe-requisitos
-- NPM
+- NPM (download)
+- Java 11 (download)
+- Maven
 
 ### Bibliotecas
 - Front-end
@@ -17,10 +19,19 @@ Lista
 - Back-end
     - Maven
     - Java 11
-    - Spring
+    - Spring Boot
+    - Lombok
+    
+- Database
+    - H2
 
 ### Arquitetura do Back-end
-Lista
+Arquitetura de camadas fazer um texto.  
+A divisão de pacotes:
+    - Business;  
+    - Entity;  
+    - Repository;  
+    - Service.  
 
 ### Arquitetura do Front-end
 Projeto desenvolvido utilizando o "Vue-cli" para criar a estrutura inicial do `casa-popular-app`.
