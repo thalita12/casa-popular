@@ -4,6 +4,7 @@ Projeto para realizar a distribuição de casas populares do governo.
 ### Índice
 * [Pré-requisitos](#pré-requisitos "Pré-requisitos para a execução deste projeto")
 * [Bibliotecas](#bibliotecas "Bibliotecas utilizadas")
+* [Motivações]()
 * [Arquitetura do Back-end](#arquitetura-do-back-end "Descrição da arquitetura do back-end")
 * [Arquitetura do Front-end](#arquitetura-do-front-end "Descrição da arquitetura do front-end")
 * [Instalação](#instalação "Instalação do projeto")
@@ -26,30 +27,30 @@ Projeto para realizar a distribuição de casas populares do governo.
     - Java 11
     - Spring Boot
     - Lombok
+    - Spring Boot Test
     
 - Database
     - H2
 
-### Arquitetura do Back-end
-Arquitetura de camadas utilizada neste projeto, trabalha em múltiplas camadas para dividir as responsabilidads e realizar um melhor gerenciamento e entendimento da organização e fluxo de atividade.
-
-Há uma separação entre as diversas responsabilidades envolvidas no desempenho de cada função, de modo que o programa não é mais dividido entre um servidor e um cliente, mas em três ou mais camadas que se comunicam entre si quando têm necessidade.
-
-Escolhi desenvolver o projeto em 3 camadas, que são:
-
-- **Camada de Apresentação:** representada pelo navegador e pelo servidor web, organiza e exibe as informações para o usuário; recebe comandos e organiza a forma de entrada e saída;  
-- **Camada de Lógica de Aplicação:** representada por um conjunto de objetos que contém a lógica de negócios do aplicativo; esses objetos ficam hosperdados num Servidor de Aplicativos. Pode ser reusada por várias formas de apresentação diferentes;  
-- **Camada de Serviços de Dados:** representada pelo servidor de dados e pela abstração de dados, acesso a programas legados e sistema de arquivos. Somente pode ser acessada pela camada de lógica de aplicação, o que aumenta a segurança do sistema.  
-
-A divisão de pacotes estão divididos a seguir:  
-- **Business:** camada onde está o código que obtém os dados e os repassa de uma forma mais intuitiva, realizando a validação de lógica conforme as regras do negócio e verificando se os dados estão no formato adequado;  
-- **Entity:** ;  
-- **Repository:** ;  
-- **Service:** .  
-    
+### Motivações
 Para resolver o desafio técnico da distribuição de casas populares do governo, fiz uma lista de critérios e validei se as familias atendiam essa lista, utilizando o **"Design Pattern Delegation"**.
 
 O **Design Pattern Delegate** é uma técnica em que um objeto expressa certo comportamento para o exterior, mas na realidade delega a responsabilidade de implementar esse comportamento em um objeto associado. Isso parece muito semelhante ao padrão de proxy, mas serve a um propósito muito diferente. A delegação é um mecanismo de abstração que centraliza o comportamento do objeto (método).
+
+### Arquitetura do Back-end
+Arquitetura de camadas utilizada neste projeto, trabalha em múltiplas camadas para dividir as responsabilidades e realizar um melhor gerenciamento e entendimento da organização e fluxo de atividades.
+
+Escolhi desenvolver o projeto em 3 camadas, que são:
+
+- **Camada de Apresentação:** que são os serviços REST que representam a interface que acessam os recursos;  
+- **Camada de Lógica de Aplicação:** onde contém a lógica de negócios da aplicação e regras de validação;  
+- **Camada de Serviços de Dados:** provedor de dados da aplicação.  
+
+A divisão de pacotes estão divididos a seguir:  
+- **Business:** camada onde está o código que obtém os dados e realiza a validação de lógica, conforme as regras do negócio;  
+- **Entity:** mapeamento das entidades do banco de dados;  
+- **Repository:** realiza o serviço de buscar os dados no banco;  
+- **Service:** camada onde contém os serviços REST.  
 
 ### Arquitetura do Front-end
 Projeto desenvolvido utilizando o "Vue-cli" para criar a estrutura inicial do `casa-popular-app`.  
