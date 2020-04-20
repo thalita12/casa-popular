@@ -3,10 +3,10 @@ Projeto para realizar a distribuição de casas populares do governo.
 
 ### Índice
 * [Pré-requisitos](#pré-requisitos "Pré-requisitos para a execução deste projeto")
-* [Bibliotecas](#objetivo "Objetivo desta nota técnica")
-* [Arquitetura do Back-end](#objetivo "Objetivo desta nota técnica")
-* [Arquitetura do Front-end](#objetivo "Objetivo desta nota técnica")
-* [Instalação](#objetivo "Objetivo desta nota técnica")
+* [Bibliotecas](#bibliotecas "Bibliotecas utilizadas")
+* [Arquitetura do Back-end](#arquitetura-do-back-end "Descrição da arquitetura do back-end")
+* [Arquitetura do Front-end](#arquitetura-do-front-end "Descrição da arquitetura do front-end")
+* [Instalação](#instalação "Instalação do projeto")
 * [Licença](#licença "Licença do projeto")
 
 ### Pŕe-requisitos
@@ -67,7 +67,7 @@ A estrutura de pastas estão dividas a seguir:
 - **main.js:** arquivo de configuração do Vue.
 
 ### Instalação
-- Para execução do **front-end**, basta visualizar o [arquivo de instalação](casa-popular-app/README.md).  
+- Para a execução do **front-end**, basta visualizar o [arquivo de instalação](casa-popular-app/README.md).  
 
 - Para a execução do **back-end**, basta visualizar o [arquivo de instalação](casa-popular-api/README.md).
 
