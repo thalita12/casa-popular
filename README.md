@@ -20,7 +20,7 @@ No meu back-end utilizei a arquitetura em camadas, algo que já tinho visto em o
 
 Os pacotes ficaram divididos conforme o item de Arquitetura do Back-end. Queria dizer, que meu foco não é back-end, sou desenvolvedora front-end, e também atuo na área de testes e análise de requisitos. No back-end faço correções, além de desenvolver pequenos requisitos.
 
-### Pŕe-requisitos
+### Pré-requisitos
 - Node.js [(download)](https://nodejs.org)
 - Java 11 [(download)](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - Maven [(download)](https://maven.apache.org/download.cgi)
