@@ -1,11 +1,12 @@
 <template>
-    <div>
-        <h1>Lista de famílias contempladas</h1>
+    <div class="contemplados">
+        <h1 class="contemplados__titulo">Lista de famílias contempladas</h1>
 
         <v-data-table
                 :headers="headers"
                 :items="resultado"
-                :items-per-page="10"/>
+                :items-per-page="10"
+                no-results-text="Nenhuma família encontrada"/>
     </div>
 </template>
 
@@ -28,17 +29,17 @@
                     },
                     {
                         text: 'Qtd Critérios',
-                        value: 'fat',
+                        value: 'criteriosAtendidos',
                         align: 'left'
                     },
                     {
                         text: 'Pontuação Total',
-                        value: 'fat',
+                        value: 'pontos',
                         align: 'left'
                     },
                     {
                         text: 'Data Seleção',
-                        value: 'fat',
+                        value: 'dataDeSelecao',
                         align: 'left'
                     }
                 ],
@@ -55,8 +56,7 @@
         methods: {
             async buscar() {
                 try {
-                    const {data} = await this.$store.dispatch(actionTypes.BUSCAR_FAMILIAS_CONTEMPLADAS)
-                    this.resultado = data.lista
+                    this.resultado = await this.$store.dispatch(actionTypes.BUSCAR_FAMILIAS_CONTEMPLADAS)
                 } catch (e) {
                     this.mostrarNotificacaoErro()
                 }
@@ -66,5 +66,14 @@
 </script>
 
 <style scoped lang="scss">
+    .contemplados {
+        width: 100%;
+        padding: 20px;
 
+        &__titulo {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+    }
 </style>

@@ -8,8 +8,18 @@
                  relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
     </changeSet>
 
-    <changeSet author="thalita.oliveira" id="002-carga-inicial">
-        <sqlFile encoding="utf8" path="002-carga-inicial.sql"
+    <changeSet author="thalita.oliveira" id="002-carga-inicial-familia-apta">
+        <sqlFile encoding="utf8" path="002-carga-inicial-familia-apta.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="thalita.oliveira" id="003-carga-inicial-familia-contemplada">
+        <sqlFile encoding="utf8" path="003-carga-inicial-familia-contemplada.sql"
+                 relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="thalita.oliveira" id="004-carga-inicial-familia-invalida">
+        <sqlFile encoding="utf8" path="004-carga-inicial-familia-invalida.sql"
                  relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
     </changeSet>
 

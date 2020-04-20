@@ -26,9 +26,10 @@ public class FamiliaContempladaServiceTest {
     public void deveBuscarFamiliasContempladas() throws Exception {
 
         this.mockMvc
-                .perform(get("/familias-contempladas"))
+                .perform(get("/api/familias-contempladas"))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id", equalTo(10)));
     }
 
 }

@@ -6,6 +6,7 @@
             :headers="headers"
             :items="resultado"
             :items-per-page="10"
+            no-results-text="Nenhuma família encontrada"
             class="elevation-1"/>
   </div>
 </template>
@@ -60,10 +61,12 @@
 <style scoped lang="scss">
   .familias-aptas {
     width: 100%;
+    padding: 20px;
 
     &__titulo {
       font-size: 24px;
       margin-bottom: 20px;
+      text-align: left;
     }
   }
 </style>

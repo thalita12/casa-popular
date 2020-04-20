@@ -30,7 +30,7 @@ public class CriterioBO {
         criterios.forEach(pontuador -> {
             Boolean criterioAtendido = pontuador.validarCriterio(familia);
             if (!criterioAtendido) {
-                atendeTodosOsCriterios.set(Boolean.TRUE);
+                atendeTodosOsCriterios.set(Boolean.FALSE);
             }
         });
 

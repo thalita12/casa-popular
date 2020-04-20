@@ -26,10 +26,10 @@ public class FamiliaAptaServiceTest {
     public void deveBuscarFamiliasAptas() throws Exception {
 
         this.mockMvc
-                .perform(get("/familias-aptas"))
+                .perform(get("/api/familias-aptas"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id", equalTo(1)));
+                .andExpect(jsonPath("$[0].id", equalTo(7)));
     }
 
 }

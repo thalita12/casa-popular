@@ -31,7 +31,7 @@ public class FamiliaAptaBO {
     public List<Familia> buscarTodas() {
         List<Familia> todasFamilias = buscarFamilias();
 
-        List<Familia> familiasAptas = filtarFamiliasAptas(todasFamilias);
+        List<Familia> familiasAptas = filtrarFamiliasAptas(todasFamilias);
 
         return calcularPontuacao(familiasAptas)
             .stream()
@@ -49,7 +49,7 @@ public class FamiliaAptaBO {
         return familias;
     }
 
-    private List<Familia> filtarFamiliasAptas(List<Familia> familias) {
+    private List<Familia> filtrarFamiliasAptas(List<Familia> familias) {
         return criterioBO.validarCriterios(familias);
     }
 

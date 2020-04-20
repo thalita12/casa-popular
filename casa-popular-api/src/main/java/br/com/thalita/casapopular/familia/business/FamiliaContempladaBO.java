@@ -29,7 +29,7 @@ public class FamiliaContempladaBO {
     public List<Familia> buscarTodas() {
         List<Familia> todasFamilias = buscarFamilias();
 
-        List<Familia> familiasAptas = filtarFamiliasContempladas(todasFamilias);
+        List<Familia> familiasAptas = filtrarFamiliasContempladas(todasFamilias);
 
         return calcularPontuacao(familiasAptas)
             .stream()
@@ -47,7 +47,7 @@ public class FamiliaContempladaBO {
         return familias;
     }
 
-    private List<Familia> filtarFamiliasContempladas(List<Familia> familias) {
+    private List<Familia> filtrarFamiliasContempladas(List<Familia> familias) {
         return familias
                 .stream()
                 .filter(familia -> Objects.nonNull(familia.getDataDeSelecao()))

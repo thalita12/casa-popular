@@ -67,9 +67,9 @@ A estrutura de pastas estão dividas a seguir:
 - **main.js:** arquivo de configuração do Vue.
 
 ### Instalação
-- Para a execução do **front-end**, basta visualizar o [arquivo de instalação](casa-popular-app/README.md).  
+- Para a execução do **back-end**, basta visualizar o [arquivo de instalação](casa-popular-api/README.md).  
 
-- Para a execução do **back-end**, basta visualizar o [arquivo de instalação](casa-popular-api/README.md).
+- Para a execução do **front-end**, basta visualizar o [arquivo de instalação](casa-popular-app/README.md).
 
 ### Licença
 [MIT](LICENSE)
