@@ -2,13 +2,23 @@
 Projeto para realizar a distribuição de casas populares do governo.
 
 ### Índice
+* [Motivações](#motivações "Minhas considerações")
 * [Pré-requisitos](#pré-requisitos "Pré-requisitos para a execução deste projeto")
 * [Bibliotecas](#bibliotecas "Bibliotecas utilizadas")
-* [Motivações]()
 * [Arquitetura do Back-end](#arquitetura-do-back-end "Descrição da arquitetura do back-end")
 * [Arquitetura do Front-end](#arquitetura-do-front-end "Descrição da arquitetura do front-end")
 * [Instalação](#instalação "Instalação do projeto")
+* [Resultado](#resultado "Resultado do projeto")
 * [Licença](#licença "Licença do projeto")
+
+### Motivações
+Depois que li sobre o desafio, pensei em fazer algo parecido com uma solução completa, contendo front-end para as telas, banco de dados e back-end com as regras.  
+
+Utilizei o Spring Boot para fazer o back-end, no front-end utilizei o Vue, e para o banco de dados utilizei o H2 para fazer algo simples e mais rápido.  
+
+No meu back-end utilizei a arquitetura em camadas, algo que já tinho visto em outros projetos que trabalhei, e escolhi ele por ser algo que conheço e trabalho atualmente.  
+
+Os pacotes ficaram divididos conforme o item de Arquitetura do Back-end. Queria dizer, que meu foco não é back-end, sou desenvolvedora front-end, e também atuo na área de testes e análise de requisitos. No back-end faço correções, além de desenvolver pequenos requisitos.
 
 ### Pŕe-requisitos
 - Node.js [(download)](https://nodejs.org)
@@ -32,11 +42,6 @@ Projeto para realizar a distribuição de casas populares do governo.
 - Database
     - H2
 
-### Motivações
-Para resolver o desafio técnico da distribuição de casas populares do governo, fiz uma lista de critérios e validei se as familias atendiam essa lista, utilizando o **"Design Pattern Delegation"**.
-
-O **Design Pattern Delegate** é uma técnica em que um objeto expressa certo comportamento para o exterior, mas na realidade delega a responsabilidade de implementar esse comportamento em um objeto associado. Isso parece muito semelhante ao padrão de proxy, mas serve a um propósito muito diferente. A delegação é um mecanismo de abstração que centraliza o comportamento do objeto (método).
-
 ### Arquitetura do Back-end
 Arquitetura de camadas utilizada neste projeto, trabalha em múltiplas camadas para dividir as responsabilidades e realizar um melhor gerenciamento e entendimento da organização e fluxo de atividades.
 
@@ -51,6 +56,10 @@ A divisão de pacotes estão divididos a seguir:
 - **Entity:** mapeamento das entidades do banco de dados;  
 - **Repository:** realiza o serviço de buscar os dados no banco;  
 - **Service:** camada onde contém os serviços REST.  
+
+Para resolver os problemas da condição de pontuação e critérios de validação para saber se uma família é apta ou não, utilizando o **"Design Pattern Delegate"**.
+
+O **Design Pattern Delegate** é uma técnica que um objeto expressa certo comportamento para outro, delegando responsabilidades de implementação esse comportamento em um objeto associado. A delegação é um mecanismo de abstração que centraliza o comportamento do objeto (método).
 
 ### Arquitetura do Front-end
 Projeto desenvolvido utilizando o "Vue-cli" para criar a estrutura inicial do `casa-popular-app`.  
@@ -71,6 +80,16 @@ A estrutura de pastas estão dividas a seguir:
 - Para a execução do **back-end**, basta visualizar o [arquivo de instalação](casa-popular-api/README.md).  
 
 - Para a execução do **front-end**, basta visualizar o [arquivo de instalação](casa-popular-app/README.md).
+
+### Resultado
+Depois que subir o projeto, para verificar as requisições, basta conferir:
+```
+- Famílias aptas
+http://localhost:8080/api/familias-aptas
+
+- Famílias contempladas
+http://localhost:8080/api/familias-contempladas
+```
 
 ### Licença
 [MIT](LICENSE)
