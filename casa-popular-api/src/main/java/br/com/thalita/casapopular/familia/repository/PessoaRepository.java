@@ -1,6 +1,6 @@
-package br.com.thalita.casapopular.familiaapta.repository;
+package br.com.thalita.casapopular.familia.repository;
 
-import br.com.thalita.casapopular.familiaapta.entity.Pessoa;
+import br.com.thalita.casapopular.familia.entity.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -22,7 +22,7 @@
             text: 'Pontuação',
             align: 'left',
             sortable: true,
-            value: 'pontuacao'
+            value: 'pontos'
           },
           {
             text: 'Família',
@@ -48,8 +48,7 @@
     methods: {
       async buscar() {
         try {
-          const {data} = await this.$store.dispatch(actionTypes.BUSCAR_FAMILIAS_APTAS)
-          this.resultado = data.lista
+          this.resultado = await this.$store.dispatch(actionTypes.BUSCAR_FAMILIAS_APTAS)
         } catch (e) {
           this.mostrarNotificacaoErro()
         }

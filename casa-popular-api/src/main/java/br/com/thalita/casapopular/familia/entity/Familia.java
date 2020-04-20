@@ -1,4 +1,4 @@
-package br.com.thalita.casapopular.familiaapta.entity;
+package br.com.thalita.casapopular.familia.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,13 +7,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -37,16 +36,17 @@ public class Familia implements Serializable {
     @Column(name = "FA_DATA_SELECAO")
     private LocalDateTime dataDeSelecao;
 
-    @OneToMany(mappedBy="familia", fetch = FetchType.LAZY)
+    @Transient
     private List<Pessoa> pessoas;
 
-    public Integer pontuacao () {
-        return 1;
-    }
+    @Transient
+    private Integer pontos;
 
-    public Boolean apta () {
-        return Boolean.FALSE;
-    }
+    @Transient
+    private Integer criteriosAtendidos;
+
+    @Transient
+    private Boolean apta;
 
     public enum Status {
         CADASTRO_VALIDO,
